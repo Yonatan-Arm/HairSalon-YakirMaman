@@ -22,10 +22,10 @@
         @include for-tablet-layout {
             display: none;
         }
-        span:is(:hover){
+
+        span:is(:hover) {
             border-bottom: 4px solid $clr12;
             cursor: pointer;
-
         }
 
     }
@@ -39,7 +39,8 @@
             font-weight: 650;
             font-size: 14px;
         }
-        button:is(:hover){
+
+        button:is(:hover) {
             background-color: $clr13 ;
         }
 
@@ -63,7 +64,7 @@
             height: 100vh;
             width: 100%;
             padding: 25px;
-            background: linear-gradient(180deg, #a29c96 40%, #bcb3aa  60%);
+            background: linear-gradient(180deg, #a29c96 40%, #bcb3aa 60%);
             text-align: center;
             position: fixed;
             left: 50%;
@@ -78,14 +79,20 @@
                 font-size: 28px;
                 filter: drop-shadow(2px 2px 5px black);
                 cursor: pointer;
+
             }
 
             .mobile-links {
                 gap: 25px;
                 height: 100%;
                 font-size: 30px;
-                span{
+
+                span {
                     cursor: pointer;
+
+                    &:hover {
+                        border-bottom: 4px solid $clr13;
+                    }
                 }
             }
 
@@ -97,7 +104,14 @@
                     color: $clr14;
                     font-weight: 650;
                     font-size: 14px;
+
                 }
+
+                button:is(:hover) {
+                    background-color: $clr13 ;
+                }
+
+
             }
 
         }

@@ -7,9 +7,15 @@ export default function Footer() {
   return (
     <section className='footer-section flex align-center justify-center'>
         <div className='flex row links'>
+        <a href="https://api.whatsapp.com/send?phone=972534234428" target='blank'>
             <img src={whatsappLogoSrc} alt="whatsapp_logo" />
+            </a>
+            <a href="https://www.instagram.com/yakir_maman_hair/" target='blank'>
             <img src={instagramLogoSrc} alt="instagram_logo" />
+            </a>
+            <a href="https://www.facebook.com/yakir.maman.3" target='blank'>
             <img src={facebookLogoSrc} alt="whatsapp_logo" />
+            </a>
             </div>
     </section>
   )

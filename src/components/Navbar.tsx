@@ -44,14 +44,14 @@ export function Navbar({ OpenModalOrder }: any) {
             </div>
           </div>
         ) : (
-          <img src={Menusrc} alt="menu" onClick={() => setisOpen(!isOpen)} />
+          <img src={Menusrc} alt="menu" onClick={() =>{
+            setisOpen(!isOpen)
+            window.scrollTo(0,0)
+
+          }} />
         )}
       </div>
     </div>
   );
 }
 
-// onClick={event => {
-//   console.log('function 1:', sum(5, 5));
-//   console.log('function 2:', multiply(5, 5));
-// }}

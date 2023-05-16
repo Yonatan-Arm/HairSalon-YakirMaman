@@ -58,6 +58,10 @@
             button:is(:hover){
                 background-color: $clr13 ;
                 color: $clr14;
+                img{
+                    filter: none;
+                }
+                
             }
            
             button:first-child{
