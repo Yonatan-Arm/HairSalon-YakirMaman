@@ -29,21 +29,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const getDocuments = async (collectionName) => {
+const getDocuments = async (collectionName:string) => {
   const db = getFirestore(app);
   var collectionRef = collection(db, collectionName);
   const querySnapshot = await getDocs(collectionRef);
-  const docs = [];
+  const docs:Array<object> = [];
   querySnapshot.forEach((doc) => {
     docs.push({ id: doc.id, ...doc.data() });
   });
   return docs;
 };
 
-const getDocument = async (collectionName, id) => {
+const getDocument = async (collectionName:string, id:string) => {
   const db = getFirestore(app);
   try {
-    const snap = await getDoc(doc(db, collectionName, id), orderBy("asc"));
+    const snap = await getDoc(doc(db, collectionName, id));
     if (!snap.exists()) {
       return null;
     }
@@ -56,7 +56,7 @@ const getDocument = async (collectionName, id) => {
   }
 };
 
-const addDocument = async (collectionName, id, document) => {
+const addDocument = async (collectionName:string, id:string, document:object) => {
   const db = getFirestore(app);
   try {
     const docRef = await setDoc(doc(db, collectionName, id), document);
@@ -67,16 +67,16 @@ const addDocument = async (collectionName, id, document) => {
   }
 };
 
-async function saveDocument(collectionName, document, id) {
+async function saveDocument(collectionName:string, document:object, id:string) {
   const db = getFirestore(app);
   const newTaskRef = doc(db, collectionName, id);
   await setDoc(newTaskRef, document);
 }
 
 async function updateDocument(
-  collectionName,
-  reservationDetails,
-  reservationToSave
+  collectionName:string,
+  reservationDetails:any,
+  reservationToSave:object
 ) {
   const docRef = await doc(db, collectionName, reservationDetails.date);
   const field = reservationDetails.hour;

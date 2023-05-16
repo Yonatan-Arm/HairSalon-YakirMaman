@@ -6,14 +6,14 @@ async function query() {
   return await firebaseService.getDocuments(COLLECTION);
 }
 
-async function save(userId, user) {
+async function save(userId:string, user:any) {
   if (user.id) {
     return await firebaseService.saveDocument(COLLECTION, user, user.id);
   } else {
     return await firebaseService.addDocument(COLLECTION, userId, user);
   }
 }
-async function makeReservation(reservation) {
+async function makeReservation(reservation:any) {
   let reservationToSave = {
     avilable: false,
     name: reservation.name,
@@ -30,11 +30,11 @@ async function makeReservation(reservation) {
   );
 }
 
-async function getById(id) {
+async function getById(id:string) {
   return await firebaseService.getDocument(COLLECTION, id);
 }
 
-export const userService = {
+export const userService:any = {
   query,
   save,
   getById,
