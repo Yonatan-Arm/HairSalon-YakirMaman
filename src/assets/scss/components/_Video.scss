@@ -1,0 +1,32 @@
+.video-section {
+    z-index: 100;
+    width: 100vw;
+    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+
+    video {
+        width: 60%;
+        @include for-tablet-layout {
+            width: 90%;
+        }
+            
+    }
+
+    button {
+        font-size: 40px;
+        top: 20px;
+        right: 20px;
+        position: absolute;
+        color: $clr12;
+        background: none;
+        border: none;
+        filter: brightness(.3)
+    }
+}

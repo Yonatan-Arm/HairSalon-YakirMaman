@@ -1,0 +1,49 @@
+.gallary-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    h1 {
+        font-weight: 400;
+        font-size: rem(30px);
+        font-family: sans-serif;
+    }
+
+    h2 {
+        margin: 20px;
+        color: $clr12;
+    }
+
+    .gallary-contianer {
+        gap: 15px;
+
+        img {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+            transform: scale(1);
+            transition: all .25s;
+            width: rem(200px);
+            cursor: pointer;
+            filter: brightness(0.7);
+
+            &:hover {
+                transform: scale(2);
+                margin-bottom: 20px;
+                filter: unset;
+                z-index: 5;
+                top: -20px;
+                position: relative;
+            }
+
+            @include for-mobile-layout {
+                width: 80%;
+
+                &:hover {
+                    transform: scale(1.5);
+
+                }
+            }
+        }
+
+    }
+}

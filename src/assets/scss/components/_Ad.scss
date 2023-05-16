@@ -1,0 +1,24 @@
+.Ad-section {
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+    .skiils {
+        @include for-mobile-layout {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        span {
+            @include for-tablet-layout {
+                font-size: rem(20px);
+                
+            }
+
+            font-size: rem(35px);
+            font-family: monospace;
+            margin-top: 15px;
+            color: $clr16;
+            font-weight: 600;
+            height: 10vh;
+        }
+    }
+}

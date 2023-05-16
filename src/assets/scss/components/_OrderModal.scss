@@ -1,0 +1,255 @@
+// Colors
+$onyx: #3E363F;
+
+
+.order-section {
+  z-index: 50;
+  background-image: url('../imgs/orderBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  padding: 40px;
+  transform: scale(1);
+  background-position: center;
+
+  @include for-mobile-layout {
+    padding-top: 40px;
+  }
+
+
+
+  button:first-child {
+    font-size: 40px;
+    top: 25px;
+    right: 40px;
+    position: absolute;
+    color: aliceblue;
+    background: none;
+    border: none;
+    z-index: 10;
+
+    @include for-mobile-layout {
+      top: 10px;
+      right: 20px;
+    }
+
+
+  }
+
+  .Modal {
+    background: $onyx;
+    border-radius: 12px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    opacity: 0.9;
+    color: #e0eaec;
+    gap: 6px;
+
+    @include for-tablet-layout {
+      width: 100%;
+    }
+
+
+
+
+
+    input {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+      outline: none;
+      flex: 1 0 auto;
+      font-size: 20px;
+      font-weight: 300;
+
+
+    }
+
+    button {
+      background-color: $clr16;
+      font-size: 25px;
+      width: 50%;
+      justify-self: flex-end;
+      margin-top: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e4e3e3;
+      }
+
+    }
+
+
+
+
+    .dates-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 5px;
+
+      @include for-tablet-layout {
+        gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .date {
+          padding: 5px;
+          height: 30px;
+        }
+      }
+
+      label {
+        width: 100%;
+      }
+
+      .card-input-element {
+        display: none;
+
+        &:checked {
+          + {
+            .card-input {
+              box-shadow: 0 0 2px 2px #2ecc71;
+              border-radius: 20px;
+
+            }
+          }
+        }
+      }
+
+      .card-input {
+        margin: 5px;
+
+        @include for-mobile-layout {
+          margin: 1px;
+
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+
+
+
+      .date {
+        border: 1px solid #222;
+        background: $clr16;
+        color: #222;
+        padding: 8px;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 20px;
+
+        &:hover {
+          background-color: #e4e3e3;
+
+        }
+      }
+
+    }
+
+
+  }
+}
+
+
+.one {
+  transform: scaleY(.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+  .modal-background {
+    .modal {
+      transform: scale(0);
+      animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+  }
+
+  &.out {
+    transform: scale(1);
+    animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+    .modal-background {
+      .modal {
+        animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      }
+    }
+  }
+}
+
+#one {
+  transform: scaleY(.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+  .modal-background {
+    .modal {
+      transform: scale(0);
+      animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+  }
+
+  &.out {
+    transform: scale(1);
+    animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+    .modal-background {
+      .modal {
+        animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      }
+    }
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(.005) scaleX(0);
+  }
+
+  50% {
+    transform: scaleY(.005) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+
+  50% {
+    transform: scaleY(.005) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(.005) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

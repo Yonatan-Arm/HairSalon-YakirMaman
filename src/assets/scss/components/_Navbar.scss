@@ -1,0 +1,105 @@
+.navbar {
+    height: 15vh;
+    color: $clr13;
+
+    @include for-tablet-layout {
+        justify-content: space-between !important;
+    }
+
+    .logo {
+        height: 100%;
+
+        img {
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    .links {
+        gap: 40px;
+        font-size: rem(25px);
+
+        @include for-tablet-layout {
+            display: none;
+        }
+        span:is(:hover){
+            border-bottom: 4px solid $clr12;
+            cursor: pointer;
+
+        }
+
+    }
+
+    .cta-btn {
+        button {
+            padding: 15px;
+            background-color: $clr12;
+            border-radius: 12px;
+            color: $clr14;
+            font-weight: 650;
+            font-size: 14px;
+        }
+        button:is(:hover){
+            background-color: $clr13 ;
+        }
+
+        @include for-tablet-layout {
+            display: none;
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+
+        @include for-tablet-layout {
+            display: unset;
+        }
+
+        img {
+            width: rem(35px);
+        }
+
+        .phone-menu {
+            height: 100vh;
+            width: 100%;
+            padding: 25px;
+            background: linear-gradient(180deg, #a29c96 40%, #bcb3aa  60%);
+            text-align: center;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+
+            .close-btn {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                font-size: 28px;
+                filter: drop-shadow(2px 2px 5px black);
+                cursor: pointer;
+            }
+
+            .mobile-links {
+                gap: 25px;
+                height: 100%;
+                font-size: 30px;
+                span{
+                    cursor: pointer;
+                }
+            }
+
+            .cta-btn-mobile {
+                button {
+                    padding: 10px;
+                    background-color: $clr12;
+                    border-radius: 12px;
+                    color: $clr14;
+                    font-weight: 650;
+                    font-size: 14px;
+                }
+            }
+
+        }
+    }
+}

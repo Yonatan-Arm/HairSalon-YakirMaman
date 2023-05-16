@@ -1,0 +1,37 @@
+// Externals
+
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+
+// Basics
+@import 'basics/base';
+@import 'basics/helpers';
+@import 'basics/layout';
+
+// Pages
+
+// Components
+@import 'components/Navbar';
+@import 'components/Hero';
+@import 'components/Ad';
+@import 'components/Services';
+@import 'components/About';
+@import 'components/Gallary';
+@import 'components/OrderModal';
+@import 'components/Video';
+@import 'components/Footer';
+.App {
+    padding: 30px 60px;
+    background: linear-gradient(180deg, $clr11 40%, $clr14 60%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: sans-serif;   
+
+    @include for-tablet-layout {
+        padding: 20px 40px;
+    }
+}

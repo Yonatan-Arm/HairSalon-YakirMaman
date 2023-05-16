@@ -1,0 +1,43 @@
+.services-section {
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    h3 {
+        font-weight: 550;
+        color: $clr16;
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: rem(30px);
+
+        span {
+            color: $clr15;
+        }
+    }
+
+    .service-continaer {
+        @include for-tablet-layout {
+            flex-wrap: wrap;
+            gap: unset;
+        }
+        gap: 25px;
+    }
+
+    .service-card {
+        @include for-tablet-layout {
+            width: 50%;
+        }
+        @include for-mobile-layout {
+            width: 80%;
+            margin: 0 auto;
+        }
+        width: 25%;
+        padding: 10px;
+        img {
+            width: 50px;
+        }
+
+    }
+}
