@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { userService  } from "../services/user.service.js";
+import LogoSrc from '../assets/imgs/logo.jpg'
 
 export default function OrderModal({ closeModalOrder }: any) {
   const [isOpenDates, setisOpenDates] = useState(false);
@@ -103,7 +104,12 @@ export default function OrderModal({ closeModalOrder }: any) {
               )}
             </div>
           )}
-          {isMakeReservation && <div>send your Reservation...</div>}
+          {isMakeReservation && 
+          <div className="modal-loader flex column justify-center align-center">
+            <img src={LogoSrc} alt="loading" />
+            <span>send your reservation...</span>
+          </div>
+          }
           <button>send</button>
         </form>
       </div>

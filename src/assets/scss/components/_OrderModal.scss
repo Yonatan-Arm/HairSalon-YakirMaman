@@ -1,5 +1,4 @@
 // Colors
-$onyx: #3E363F;
 
 
 .order-section {
@@ -41,7 +40,7 @@ $onyx: #3E363F;
   }
 
   .Modal {
-    background: $onyx;
+    background: $clr8;
     border-radius: 12px;
     padding: 20px;
     width: 80%;
@@ -155,6 +154,21 @@ $onyx: #3E363F;
 
     }
 
+    .modal-loader{
+      gap: 10px;
+      img{
+        -webkit-animation: spin 2s linear infinite;
+        border-radius: 50%;
+        width: 150px;
+        border: 16px solid #f3f3f3;
+        // border-radius: 50%;
+        // border-top: 16px solid $clr13;
+        animation: spin 2s linear infinite;
+      }
+
+      }
+    
+
 
   }
 }
@@ -252,4 +266,15 @@ $onyx: #3E363F;
   100% {
     transform: scale(0);
   }
+}
+
+      
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

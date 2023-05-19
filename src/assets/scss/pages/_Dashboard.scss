@@ -1,0 +1,90 @@
+.dashboard-section {
+    background-image: url('../imgs/orderBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    transform: scale(1);
+    background-position: center;
+
+    .dashboard-modal {
+        background: $clr8;
+        border-radius: 12px;
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+        opacity: 0.9;
+        color: #e0eaec;
+        gap: 10px;
+        min-height: 85%;
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .dates-container {
+            gap: 12px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .reservation-card {
+            gap: 10px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: $clr6;
+            flex-wrap: wrap;
+
+            @include for-tablet-layout {
+                justify-content: space-evenly;
+            }
+            @include for-mobile-layout {
+                flex-direction: column;
+            }
+
+            .reservation-card-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 40px;
+            }
+
+            .reservation-card-title {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+
+            .reservation-card-content {
+                padding: 1rem 0;
+                gap: 10px;
+                font-size: 20px;
+            }
+
+
+
+            
+            .reservation-card-action-button {
+                img{
+                    width: 30px;
+                }
+                cursor: pointer;
+                width: rem(50px);
+                background-color: transparent;
+                border: none;
+            }
+
+
+        }
+    }
+}
