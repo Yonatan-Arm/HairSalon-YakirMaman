@@ -1,10 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { userService } from "../services/user.service.js";
 import deleteBtn from "../assets/imgs/delete-btn.svg";
+import HomeSrc from "../assets/imgs/homeSvg.svg";
+import { NavLink, useNavigate } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../services/firebase.service";
 
 export default function Dashboard() {
   const [dates, setDates] = useState({});
   const [date, setDate] = useState("");
+  const navigate = useNavigate();
+  useEffect(() => {
+    onAuthStateChanged(auth, (user: any) => {
+      if (user && user.uid === import.meta.env.VITE__USERADMIN) {
+      } else {
+        navigate("/");
+      }
+    });
+    return () => {};
+  }, []);
 
   useEffect(() => {
     if (!date) {
@@ -49,6 +63,9 @@ export default function Dashboard() {
     <section className="dashboard-section flex justify-center align-center">
       <div className="dashboard-modal flex column align-center">
         <h2 className="text-center">Welcome Yakir</h2>
+        <NavLink to="/">
+          <img src={HomeSrc} alt="Home-logo" />
+        </NavLink>
         <label htmlFor="date">
           <input
             name="date"

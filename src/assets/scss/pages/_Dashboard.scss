@@ -21,6 +21,18 @@
         color: #e0eaec;
         gap: 10px;
         min-height: 85%;
+        position: absolute;
+        @include for-mobile-layout {
+            width: 90%;
+            a{
+                left: 10px;
+            }
+        }
+        a{
+            width: 30px;
+            position: absolute;
+            left: 20px;
+        }
 
         input {
             padding: 10px;

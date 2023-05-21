@@ -16,14 +16,19 @@
     }
 
     .links {
-        gap: 40px;
+        gap: 30px;
         font-size: rem(25px);
 
-        @include for-tablet-layout {
+        @include for-wide-layout {
+            gap: 15px;
+        }
+
+        @include for-normal-layout {
             display: none;
         }
 
-        span:is(:hover) {
+        span:is(:hover),
+        a:is(:hover) {
             border-bottom: 4px solid $clr12;
             cursor: pointer;
         }
@@ -38,13 +43,17 @@
             color: $clr14;
             font-weight: 650;
             font-size: 14px;
+
+            @include for-wide-layout {
+                padding: 12px;
+            }
         }
 
         button:is(:hover) {
             background-color: $clr13 ;
         }
 
-        @include for-tablet-layout {
+        @include for-mobile-layout {
             display: none;
         }
     }
@@ -52,12 +61,13 @@
     .mobile-menu {
         display: none;
 
-        @include for-tablet-layout {
+        @include for-normal-layout {
             display: unset;
         }
 
         img {
             width: rem(35px);
+            cursor: pointer;
         }
 
         .phone-menu {
@@ -87,13 +97,14 @@
                 height: 100%;
                 font-size: 30px;
 
-                span {
+                span,a {
                     cursor: pointer;
 
                     &:hover {
                         border-bottom: 4px solid $clr13;
                     }
                 }
+                
             }
 
             .cta-btn-mobile {

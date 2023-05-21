@@ -13,6 +13,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { userService } from "./user.service.js";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey:import.meta.env.VITE_API_KEY,
@@ -83,6 +84,8 @@ async function updateDocument(
   await updateDoc(docRef, { [`${field}`]: reservationToSave });
 }
 
+
+export const auth = getAuth(app);
 export const firebaseService = {
   db,
   getDocuments,
