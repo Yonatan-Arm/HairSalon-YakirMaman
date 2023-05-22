@@ -6,6 +6,7 @@
     padding: 120px;
     margin-bottom: 20px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/imgs/Yakir-Maman-background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/imgs/Yakir-Maman-background.jpg') center center/cover no-repeat !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -60,7 +61,8 @@
         span {
             text-shadow: -0.01em -0.01em 0.01em #000;
             color: $clr14;
-            animation: rise 2s ease-in-out 0.5s forwards;
+            -webkit-animation: rise 2s ease-in-out 0.5s forwards;
+                    animation: rise 2s ease-in-out 0.5s forwards;
             font-size: 3rem;
             font-family: "Audiowide", cursive;
 
@@ -90,7 +92,8 @@
 
                 img {
                     width: 20px;
-                    filter: drop-shadow(2px 2px 2px rgb(247, 247, 247));
+                    -webkit-filter: drop-shadow(2px 2px 2px rgb(247, 247, 247));
+                            filter: drop-shadow(2px 2px 2px rgb(247, 247, 247));
                 }
             }
 
@@ -103,7 +106,8 @@
                 color: $clr14;
 
                 img {
-                    filter: none;
+                    -webkit-filter: none;
+                            filter: none;
                 }
 
             }
@@ -131,7 +135,8 @@
 
         .image {
             border-radius: 50%;
-            filter: drop-shadow(2px 4px 4px black);
+            -webkit-filter: drop-shadow(2px 4px 4px black);
+                    filter: drop-shadow(2px 4px 4px black);
 
         }
     }

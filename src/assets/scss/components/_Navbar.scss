@@ -88,7 +88,8 @@
                 right: 25px;
                 top: 10vh;
                 font-size: 28px;
-                filter: drop-shadow(2px 2px 5px black);
+                -webkit-filter: drop-shadow(2px 2px 5px black);
+                        filter: drop-shadow(2px 2px 5px black);
                 cursor: pointer;
                 color: #222;
 

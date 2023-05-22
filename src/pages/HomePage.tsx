@@ -25,7 +25,7 @@ export default function HomePage({ isOrderModalOpen, closeModalOrder }: any) {
 
   return (
     <div className="App">
-      <Hero />
+      <Hero OpenModalOrder={() => setOrderModalOpen(true)} />
       <Advertising />
       <Services />
       <About />

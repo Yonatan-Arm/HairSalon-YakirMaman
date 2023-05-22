@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react(), ],
   css: {
     postcss: {
-      plugins: [autoprefixer],
+      plugins: [autoprefixer()],
     },
   },
   build: {

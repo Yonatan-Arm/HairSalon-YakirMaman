@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import yakirSrc from "../assets/imgs/yakir.jpg";
 import playSrc from "../assets/imgs/play-button.svg";
 import Video from "./Video";
-export default function Hero() {
+export default function Hero({ OpenModalOrder }:any) {
   const [closeVideo, setCloseVideo] = useState(false);
 
   return (
@@ -15,7 +15,12 @@ export default function Hero() {
         <span>Hair Style Fashion</span>
      
         <div className="btn-continer flex row justify-center">
-          <button>Get started</button>
+          <button
+                  onClick={() => {
+                    OpenModalOrder();
+                   
+                  }}
+                >Get started</button>
           <button
             className="flex align-center"
             onClick={() => setCloseVideo(true)}
