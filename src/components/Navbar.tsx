@@ -6,6 +6,7 @@ import { auth } from "../services/firebase.service";
 import { NavLink, useLocation } from "react-router-dom";
 export function Navbar({ OpenModalOrder }: any) {
   const [isOpen, setisOpen] = useState(false);
+  const [isDash, setIsDash] = useState(false);
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
   const location = useLocation();
@@ -28,6 +29,10 @@ export function Navbar({ OpenModalOrder }: any) {
 
   useEffect(() => {
     isOpen ? setisOpen(false) : null;
+    location.pathname === "/dashboard" ? setIsDash(true) : null;
+    return () => {
+      setIsDash(false)
+    };
   }, [location]);
 
   const signOutUser = async () => {
@@ -41,15 +46,25 @@ export function Navbar({ OpenModalOrder }: any) {
   };
 
   return (
-    <div className="navbar flex row space-between align-center">
+    <div
+      className={`
+        ${
+          isDash
+            ? "navbar flex row space-between align-center dashboardPage"
+            : "navbar flex row space-between align-center"
+        }`}
+    >
+      {" "}
       <div className="logo">
-        <img src={Logosrc} alt="logo" />
+        <NavLink to="/">
+          <img src={Logosrc} alt="logo" />
+        </NavLink>
       </div>
       <div className="flex  links">
-        <span>Home</span>
-        <span>Service</span>
-        <span>About</span>
-        <span>Contect</span>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/">Service</NavLink>
+        <NavLink to="/">About</NavLink>
+        <NavLink to="/">Contect</NavLink>
         {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
         {isUserLoggedIn && <span onClick={() => signOutUser()}>signout</span>}
         {!isUserLoggedIn && !isAdminLoggedIn && (
@@ -66,10 +81,10 @@ export function Navbar({ OpenModalOrder }: any) {
               X
             </span>
             <div className="flex column mobile-links align-center justify-center">
-              <span>Home</span>
-              <span>Service</span>
-              <span>About</span>
-              <span>Contect</span>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Service</NavLink>
+              <NavLink to="/">About</NavLink>
+              <NavLink to="/">Contect</NavLink>
               {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
               {isUserLoggedIn && (
                 <span onClick={() => signOutUser()}>signout</span>

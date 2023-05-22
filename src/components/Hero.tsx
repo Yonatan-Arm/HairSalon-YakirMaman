@@ -7,25 +7,26 @@ export default function Hero() {
 
   return (
     <section className="hero-section flex row ">
-      <div className="text-section flex column">
-        <span>We are looking to make you <span className="span-color">handsome</span> </span>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          cumque facere molestiae provident explicabo
-        </p>
-        <div className="btn-continer flex row justify-center">
-          <button>Get started</button>
-          <button className="flex align-center"  onClick={()=>setCloseVideo(true)}>
-            <img src={playSrc} alt="playSrc"/>
-            Watch video</button>
-        </div>
-      </div>
       <div className="profile-img flex align-center justify-center">
         <img src={yakirSrc} alt="yakir-maman" className="image" />
       </div>
-      {closeVideo && (
-      <Video closeVideo={() => setCloseVideo(false)} />
-      )}
+      <div className="text-section flex column">
+        <h1>Yakir Maman</h1>
+        <span>Hair Style Fashion</span>
+     
+        <div className="btn-continer flex row justify-center">
+          <button>Get started</button>
+          <button
+            className="flex align-center"
+            onClick={() => setCloseVideo(true)}
+          >
+            <img src={playSrc} alt="playSrc" />
+            Watch video
+          </button>
+        </div>
+      </div>
+
+      {closeVideo && <Video closeVideo={() => setCloseVideo(false)} />}
     </section>
   );
 }

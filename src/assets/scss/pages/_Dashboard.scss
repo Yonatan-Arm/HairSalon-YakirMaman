@@ -20,10 +20,12 @@
         opacity: 0.9;
         color: #e0eaec;
         gap: 10px;
-        min-height: 85%;
-        position: absolute;
+        min-height: 80%;
+        position: relative;
+        margin-top: 10vh;
         @include for-mobile-layout {
             width: 90%;
+            min-height: 75%;
             a{
                 left: 10px;
             }

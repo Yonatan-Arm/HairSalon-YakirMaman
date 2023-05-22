@@ -1,6 +1,7 @@
 .navbar {
     height: 15vh;
-    color: $clr13;
+    color: $clr11;
+    z-index: 20;
 
     @include for-tablet-layout {
         justify-content: space-between !important;
@@ -38,7 +39,7 @@
     .cta-btn {
         button {
             padding: 15px;
-            background-color: $clr12;
+            background-color: $clr5;
             border-radius: 12px;
             color: $clr14;
             font-weight: 650;
@@ -89,6 +90,7 @@
                 font-size: 28px;
                 filter: drop-shadow(2px 2px 5px black);
                 cursor: pointer;
+                color: #222;
 
             }
 
@@ -96,21 +98,23 @@
                 gap: 25px;
                 height: 100%;
                 font-size: 30px;
+                color: #222;
 
-                span,a {
+                span,
+                a {
                     cursor: pointer;
 
                     &:hover {
                         border-bottom: 4px solid $clr13;
                     }
                 }
-                
+
             }
 
             .cta-btn-mobile {
                 button {
                     padding: 10px;
-                    background-color: $clr12;
+                    background-color: $clr5;
                     border-radius: 12px;
                     color: $clr14;
                     font-weight: 650;
@@ -126,5 +130,21 @@
             }
 
         }
+    }
+}
+
+.navbar.dashboardPage {
+    background: #494249ee;
+    border-radius: 20px;
+    padding: 5px;
+    
+    .cta-btn {
+        @include for-normal-layout {
+            display: none;
+        }
+    }
+    @include for-normal-layout {
+        background: unset;
+
     }
 }
