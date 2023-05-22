@@ -2,6 +2,7 @@
     height: 15vh;
     color: $clr11;
     z-index: 20;
+    padding: 0 20px;
 
     @include for-tablet-layout {
         justify-content: space-between !important;

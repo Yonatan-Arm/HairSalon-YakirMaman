@@ -2,6 +2,7 @@
     gap: 20px;
     text-align: center;
     margin-bottom: 20px;
+    padding: 20px;
 
     h3 {
         font-weight: 550;
@@ -20,21 +21,30 @@
     .service-continaer {
         @include for-tablet-layout {
             flex-wrap: wrap;
-            gap: unset;
+            justify-content: center;
         }
+
         gap: 25px;
     }
 
     .service-card {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        border-radius: 12px;
+        height: 220px;
+
         @include for-tablet-layout {
             width: 50%;
+            height: 200px;
         }
+
         @include for-mobile-layout {
             width: 80%;
             margin: 0 auto;
         }
+
         width: 25%;
-        padding: 10px;
+        padding: 15px;
+
         img {
             width: 50px;
         }

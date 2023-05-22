@@ -1,6 +1,7 @@
 .Ad-section {
-    margin-top: 80vh;
-    margin-bottom: 20px;
+    margin-top: 85vh;
+    // margin-bottom: 20px;
+    padding: 15px;
 
     .skiils {
         @include for-mobile-layout {

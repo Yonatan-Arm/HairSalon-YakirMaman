@@ -10,7 +10,7 @@ export default function Hero({ OpenModalOrder }:any) {
       <div className="profile-img flex align-center justify-center">
         <img src={yakirSrc} alt="yakir-maman" className="image" />
       </div>
-      <div className="text-section flex column">
+      <div className="text-section flex column one">
         <h1>Yakir Maman</h1>
         <span>Hair Style Fashion</span>
      

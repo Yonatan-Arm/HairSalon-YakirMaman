@@ -25,8 +25,8 @@
 @import 'components/Video';
 @import 'components/Footer';
 .App {
-    padding: 30px 60px;
-    background: linear-gradient(180deg, $clr11 40%, $clr14 60%);
+    padding-top: 20px;
+    background: $clr1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,6 @@
     font-family: sans-serif;   
 
     @include for-tablet-layout {
-        padding: 20px 40px;
+        // padding: 20px 40px;
     }
 }
