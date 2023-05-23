@@ -5,15 +5,16 @@ import Gallary from "../components/Gallary";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import OrderModal from "../components/OrderModal";
+import BigPicComp from "../components/BigPicComp";
 
 export default function HomePage({ isOrderModalOpen, closeModalOrder }: any) {
   const [OrderModalOpen, setOrderModalOpen] = useState(false);
   const close = () => {
-    setOrderModalOpen(false)
-    closeModalOrder()
+    setOrderModalOpen(false);
+    closeModalOrder();
   };
-  
-  useEffect(() => {    
+
+  useEffect(() => {
     if (isOrderModalOpen) {
       setOrderModalOpen(true);
     } else {
@@ -22,12 +23,12 @@ export default function HomePage({ isOrderModalOpen, closeModalOrder }: any) {
     return () => {};
   }, [isOrderModalOpen]);
 
-
   return (
     <div className="App">
       <Hero OpenModalOrder={() => setOrderModalOpen(true)} />
       <Advertising />
       <Services />
+      <BigPicComp />
       <About />
       <Gallary />
       {OrderModalOpen && <OrderModal closeModalOrder={close} />}
