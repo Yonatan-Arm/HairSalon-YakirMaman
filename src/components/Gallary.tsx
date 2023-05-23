@@ -1,14 +1,10 @@
 import React from "react";
-// https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/3.jpg
-// https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/4.jpg
-// https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/5.jpg
-// https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/6S.jpg
-
+import videsSrc from '../assets/imgs/yakir-video-haircut.mp4'
 export default function Gallary() {
   return (
     <section className="gallary-section flex column align-center justify-center">
-      <video autoPlay muted loop id="myVideo">
-  <source src='src/assets/imgs/yakir-video-haircut.mp4' type="video/mp4" />
+      <video autoPlay muted playsInline loop id="myVideo">
+  <source src={videsSrc} type="video/mp4" />
 </video>
       <h1>Our Gallary </h1>
       <h2>
