@@ -25,6 +25,7 @@
 @import 'components/OrderModal';
 @import 'components/Video';
 @import 'components/Footer';
+
 .App {
     padding-top: 20px;
     background: $clr1;
@@ -32,9 +33,24 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-family: sans-serif;   
+    font-family: sans-serif;
 
-    @include for-tablet-layout {
-        // padding: 20px 40px;
+
+    .phone-icon {
+        bottom: 20px;
+        right: 20px;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        z-index: 20;
+        border-radius: 50%;
+        background-image: url(/src/assets/imgs/phone-icon.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include for-tablet-layout {
+            bottom: 15px;
+            right: 15px;
+        }
     }
 }

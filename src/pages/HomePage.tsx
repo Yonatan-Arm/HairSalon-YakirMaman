@@ -25,6 +25,8 @@ export default function HomePage({ isOrderModalOpen, closeModalOrder }: any) {
 
   return (
     <div className="App">
+      <a href="tel:+972534234428" className="phone-icon">
+      </a>
       <Hero OpenModalOrder={() => setOrderModalOpen(true)} />
       <Advertising />
       <Services />
