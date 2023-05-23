@@ -25,14 +25,13 @@ export default function HomePage({ isOrderModalOpen, closeModalOrder }: any) {
 
   return (
     <div className="App">
-      <a href="tel:+972534234428" className="phone-icon">
-      </a>
+      <a href="tel:+972534234428" className="phone-icon"></a>
       <Hero OpenModalOrder={() => setOrderModalOpen(true)} />
       <Advertising />
+      <Gallary />
+      <About OpenModalOrder={() => setOrderModalOpen(true)} />
       <Services />
       <BigPicComp />
-      <About />
-      <Gallary />
       {OrderModalOpen && <OrderModal closeModalOrder={close} />}
     </div>
   );

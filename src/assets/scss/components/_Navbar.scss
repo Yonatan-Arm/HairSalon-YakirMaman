@@ -76,7 +76,9 @@
             height: 100vh;
             width: 100%;
             padding: 25px;
-            background: linear-gradient(180deg, #a29c96 40%, #bcb3aa 60%);
+            // background: linear-gradient(180deg, #a29c96 40%, #bcb3aa 60%);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/imgs/back.jpg') center center/cover no-repeat !important;
+
             text-align: center;
             position: fixed;
             left: 50%;
@@ -90,9 +92,9 @@
                 top: 10vh;
                 font-size: 28px;
                 -webkit-filter: drop-shadow(2px 2px 5px black);
-                        filter: drop-shadow(2px 2px 5px black);
+                filter: drop-shadow(2px 2px 5px black);
                 cursor: pointer;
-                color: #222;
+                color: #fff;
 
             }
 
@@ -100,14 +102,14 @@
                 gap: 25px;
                 height: 100%;
                 font-size: 30px;
-                color: #222;
+                color: #fff;
 
                 span,
                 a {
                     cursor: pointer;
 
                     &:hover {
-                        border-bottom: 4px solid $clr13;
+                        border-bottom: 4px solid #04aa6d;
                     }
                 }
 
@@ -116,7 +118,7 @@
             .cta-btn-mobile {
                 button {
                     padding: 10px;
-                    background-color: $clr5;
+                    background-color: #222;
                     border-radius: 12px;
                     color: $clr14;
                     font-weight: 650;
@@ -125,7 +127,7 @@
                 }
 
                 button:is(:hover) {
-                    background-color: $clr13 ;
+                    background-color: #04aa6d;
                 }
 
 
@@ -139,12 +141,13 @@
     background: #494249ee;
     border-radius: 20px;
     padding: 5px;
-    
+
     .cta-btn {
         @include for-normal-layout {
             display: none;
         }
     }
+
     @include for-normal-layout {
         background: unset;
 

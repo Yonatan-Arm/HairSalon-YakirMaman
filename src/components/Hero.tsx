@@ -20,7 +20,7 @@ export default function Hero({ OpenModalOrder }:any) {
                     OpenModalOrder();
                    
                   }}
-                >Get started</button>
+                >זימון תור למספרה</button>
           <button
             className="flex align-center"
             onClick={() => setCloseVideo(true)}
