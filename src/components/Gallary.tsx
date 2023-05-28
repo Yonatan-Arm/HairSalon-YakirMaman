@@ -1,11 +1,13 @@
 import React from "react";
-import videsSrc from '../assets/imgs/yakir-video-haircut.mp4'
+import videsSrc from "../assets/imgs/yakir-video-haircut.mp4";
 export default function Gallary() {
+
+
   return (
     <section className="gallary-section flex column align-center justify-center">
       <video autoPlay muted playsInline loop id="myVideo">
-  <source src={videsSrc} type="video/mp4" />
-</video>
+        <source src={videsSrc} type="video/mp4" />
+      </video>
       <h1>Our Gallary </h1>
       <h2>
         <i> Enjoy Our Awesome Snapshot </i>

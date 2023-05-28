@@ -6,7 +6,7 @@ export default function Hero({ OpenModalOrder }:any) {
   const [closeVideo, setCloseVideo] = useState(false);
 
   return (
-    <section className="hero-section flex row ">
+    <section className="hero-section flex row " id="Home">
       <div className="profile-img flex align-center justify-center">
         <img src={yakirSrc} alt="yakir-maman" className="image" />
       </div>

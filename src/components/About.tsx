@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About({ OpenModalOrder }: any) {
   return (
-    <section className="about-section">
+    <section className="about-section" id="about">
       <h1>About Us</h1>
       <h3>
         <i>The Hair Style Salon Since 2015 </i>

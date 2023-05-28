@@ -5,7 +5,7 @@ import facebookLogoSrc from '../assets/imgs/facebook-logo.svg'
 
 export default function Footer() {
   return (
-    <section className='footer-section flex column align-center justify-center'>
+    <section id='Contect' className='footer-section flex column align-center justify-center'>
         <div className='flex row links'>
         <a href="https://api.whatsapp.com/send?phone=972534234428" target='blank'>
             <img src={whatsappLogoSrc} alt="whatsapp_logo" />

@@ -4,9 +4,12 @@ import Menusrc from "../assets/imgs/menu.svg";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../services/firebase.service";
 import { NavLink, useLocation } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 export function Navbar({ OpenModalOrder }: any) {
   const [isOpen, setisOpen] = useState(false);
   const [isDash, setIsDash] = useState(false);
+  const [isSignInPage, setIsSignInPage] = useState(false);
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
   const location = useLocation();
@@ -30,8 +33,12 @@ export function Navbar({ OpenModalOrder }: any) {
   useEffect(() => {
     isOpen ? setisOpen(false) : null;
     location.pathname === "/dashboard" ? setIsDash(true) : null;
+    location.pathname === "/signup" || location.pathname === "/login"
+      ? setIsSignInPage(true)
+      : null;
     return () => {
-      setIsDash(false)
+      setIsDash(false);
+      setIsSignInPage(false);
     };
   }, [location]);
 
@@ -60,19 +67,30 @@ export function Navbar({ OpenModalOrder }: any) {
           <img src={Logosrc} alt="logo" />
         </NavLink>
       </div>
-      <div className="flex  links">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/">Service</NavLink>
-        <NavLink to="/">About</NavLink>
-        <NavLink to="/">Contect</NavLink>
-        {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
-        {isUserLoggedIn && <span onClick={() => signOutUser()}>signout</span>}
-        {!isUserLoggedIn && !isAdminLoggedIn && (
-          <NavLink to="login">Login</NavLink>
-        )}
-      </div>
+      {!isSignInPage && (
+        <div className="flex  links">
+          <AnchorLink href="#Home">Home</AnchorLink>
+          <AnchorLink href="#Service">Service</AnchorLink>
+          <AnchorLink href="#about">About</AnchorLink>
+          <AnchorLink href="#Contect">Contect</AnchorLink>
+          {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
+          {isUserLoggedIn && <span onClick={() => signOutUser()}>signout</span>}
+          {!isUserLoggedIn && !isAdminLoggedIn && (
+            <NavLink to="login">Login</NavLink>
+          )}
+        </div>
+      )}
       <div className="cta-btn">
-        <button onClick={() => OpenModalOrder()}> Book Appointment</button>
+        {isSignInPage ? (
+          <NavLink to="/">
+          <button onClick={() => OpenModalOrder()}>
+            {" "}
+             Book Appointment
+          </button>
+          </NavLink>
+        ) : (
+          <button onClick={() => OpenModalOrder()}> Book Appointment</button>
+        )}
       </div>
       <div className="mobile-menu">
         {isOpen ? (
