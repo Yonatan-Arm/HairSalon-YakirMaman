@@ -10,7 +10,7 @@ export default function About({ OpenModalOrder }: any) {
       <div className="main-continer flex row">
         {/* <div className="image-continer"></div> */}
         <div className="text-continer flex column">
-          <span>ברוכים הבאים למספרה של יקיר ממן</span>
+          <h2>ברוכים הבאים למספרה של יקיר ממן</h2>
           <p className="about-text flex column">
             <span> המספרה שלנו ממוקמת ברחוב משה אבן עזרא 23 בעיר אשדוד</span>
             והיא מקום מושלם לגברים ונשים המחפשים תספורות מעוצבות ואיכותיות. עם
@@ -31,7 +31,7 @@ export default function About({ OpenModalOrder }: any) {
           </p>
 
           <div className="details flex row align-center justify-center">
-            <span>מעצב שיער בעל ותק של 8 שנים</span>
+            <span>מעצב שיער בעל ותק של מעל 10 שנים</span>
           </div>
           <div className="cta-btn">
             <button
@@ -48,8 +48,9 @@ export default function About({ OpenModalOrder }: any) {
             <span> ו': 14:00- 9:00</span>
           </div>
           <div className="phone-details flex column align-center justify-center">
-            <span>לפרטים נוספים, יקיר ממן </span>
-            <span>053-4234428</span>
+            <span>:לפרטים נוספים, יקיר ממן </span>
+            <a href="tel:+972534234428" className="phone-span">053-4234428
+          </a>
           </div>
         </div>
       </div>

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
+    "accessibility": "^4.5.7",
     "autoprefixer": "^10.4.14",
     "dotenv": "^16.0.3",
     "firebase": "^9.21.0",
@@ -22,8 +23,10 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
+    "react-router-hash-link": "^2.4.3",
     "sass": "^1.60.0",
     "sort-by": "^1.2.0",
+    "swiper": "^9.4.1",
     "vite-plugin-env-compatible": "^1.1.1"
   },
   "devDependencies": {

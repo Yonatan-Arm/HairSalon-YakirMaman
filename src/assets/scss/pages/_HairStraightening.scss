@@ -1,0 +1,85 @@
+.straightening-section {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        gap: 10px;
+        font-size: rem(18px);
+        gap: 10px;
+
+        h2 {
+            text-decoration: solid;
+        }
+
+        .text-container {
+            width: 60%;
+            margin: 0 auto;
+
+            @include for-mobile-layout {
+                width: 90%;
+            }
+        }
+
+        .gallery-section {
+            margin-top: 1rem;
+            padding: 1rem;
+            justify-content: center;
+            box-shadow: 0 1px 1px #000;
+            gap: 8px;
+
+
+            img {
+                background-position: top;
+                background-size: cover;
+                width: 30%;
+                max-width: 300px;
+                height: rem(200px);
+                max-height: 250px;
+                box-shadow: 0 2px 10px #000;
+                cursor: pointer;
+                transition: all 0.2s;
+                border-radius: 8px;
+
+                @include for-tablet-layout {
+                    width: 45%;
+                }
+
+                @include for-mobile-layout {
+                    width: 70%;
+                }
+            }
+
+            img:hover {
+                box-shadow: none;
+                transform: scale(1.4);
+                filter: drop-shadow(2px 4px 6px black);
+                z-index: 10;
+            }
+
+
+
+
+        }
+
+        .video-gallery {
+            width: 100%;
+            height: 40vh;
+
+            video {
+                height: 100%;
+                border-radius: 8px;
+                filter: drop-shadow(2px 4px 6px black);
+            }
+        }
+
+    }
+
+
+
+
+}

@@ -4,7 +4,8 @@ import Menusrc from "../assets/imgs/menu.svg";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../services/firebase.service";
 import { NavLink, useLocation } from "react-router-dom";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 export function Navbar({ OpenModalOrder }: any) {
   const [isOpen, setisOpen] = useState(false);
@@ -55,10 +56,9 @@ export function Navbar({ OpenModalOrder }: any) {
   return (
     <div
       className={`
-        ${
-          isDash
-            ? "navbar flex row space-between align-center dashboardPage"
-            : "navbar flex row space-between align-center"
+        ${isDash
+          ? "navbar flex row space-between align-center dashboardPage"
+          : "navbar flex row space-between align-center"
         }`}
     >
       {" "}
@@ -69,12 +69,12 @@ export function Navbar({ OpenModalOrder }: any) {
       </div>
       {!isSignInPage && (
         <div className="flex  links">
-          <AnchorLink href="#Home">Home</AnchorLink>
-          <AnchorLink href="#Service">Service</AnchorLink>
-          <AnchorLink href="#about">About</AnchorLink>
-          <AnchorLink href="#Contect">Contect</AnchorLink>
+          <NavLink to="/">Home</NavLink>
+          <Link to='/#Service'>Service</Link>
+          <Link to='/#about'>About</Link>
+          <Link to='/#Contect'>Contect</Link>
           {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
-          {isUserLoggedIn && <span onClick={() => signOutUser()}>signout</span>}
+          {isUserLoggedIn && <span onClick={() => signOutUser()}>Signout</span>}
           {!isUserLoggedIn && !isAdminLoggedIn && (
             <NavLink to="login">Login</NavLink>
           )}
@@ -83,10 +83,10 @@ export function Navbar({ OpenModalOrder }: any) {
       <div className="cta-btn">
         {isSignInPage ? (
           <NavLink to="/">
-          <button onClick={() => OpenModalOrder()}>
-            {" "}
-             Book Appointment
-          </button>
+            <button onClick={() => OpenModalOrder()}>
+              {" "}
+              Book Appointment
+            </button>
           </NavLink>
         ) : (
           <button onClick={() => OpenModalOrder()}> Book Appointment</button>
@@ -100,9 +100,9 @@ export function Navbar({ OpenModalOrder }: any) {
             </span>
             <div className="flex column mobile-links align-center justify-center">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/">Service</NavLink>
-              <NavLink to="/">About</NavLink>
-              <NavLink to="/">Contect</NavLink>
+              <Link to='/#Service'>Service</Link>
+              <Link to='/#about'>About</Link>
+              <Link to='/#Contect'>Contect</Link>
               {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
               {isUserLoggedIn && (
                 <span onClick={() => signOutUser()}>signout</span>

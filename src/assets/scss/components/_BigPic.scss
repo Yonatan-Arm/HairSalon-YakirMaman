@@ -3,4 +3,44 @@
     // background-attachment: fixed !important;
     width: 100%;
     height: 70vh;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        height: calc((100% - 30px) / 2) !important;
+        width: calc((45% - 30px) / 2) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-item {
+        border-radius: 12px;
+    
+        @include for-mobile-layout {
+            width: 150px !important;
+        }
+
+        img {
+            border-radius: 50%;
+            width: rem(80px);
+            height: 80px;
+            object-fit: cover;
+            @include for-mobile-layout {
+                height: unset;
+            }
+        }
+
+    }
+
 }

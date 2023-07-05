@@ -4,6 +4,7 @@
 @import 'setup/variables';
 @import 'setup/functions';
 @import 'setup/mixins';
+@import 'setup/fonts';
 
 // Basics
 @import 'basics/base';
@@ -13,6 +14,8 @@
 // Pages
 @import 'pages/Dashboard';
 @import 'pages/Login';
+@import 'pages/HairLightening';
+@import 'pages/HairStraightening';
 
 // Components
 @import 'components/Navbar';
@@ -27,7 +30,6 @@
 @import 'components/Footer';
 
 .App {
-    padding-top: 20px;
     background: $clr1;
     min-height: 100vh;
     display: flex;

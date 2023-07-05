@@ -1,12 +1,55 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination"
+import { Grid, Pagination } from "swiper";
+
+import reviews from '../reviews.js'
+
 
 export default function BigPicComp() {
+  const [reviewsToDisplay, setReviewsToDisplay] = useState([]);
+  useEffect(() => {
+    setReviewsToDisplay(reviews)
+  }, []);
+
+
   return (
     <section className='big-pic-comp'>
-        <div>
-            {/* <img src="https://images.unsplash.com/photo-1517805686688-47dd930554b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="big-pic" /> */}
-        </div>
+      {reviewsToDisplay.length > 0 &&
+        <>
+          <Swiper
+            slidesPerView={3}
+            grid={{
+              rows: 2,
+            }}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Grid, Pagination]}
+            className="mySwiper"
+          >
+            {reviewsToDisplay.map((review: review) => (
+              <SwiperSlide key={review.id} className="grid-item flex column align-center justify-center">
+                <img src={review.profileImg} alt="profileImg" />
+                <span>{review.name}</span>
+                <span>{review.review}</span>
+                <div className="star-rate">
+                  {
+                    Array.from({ length: review.star }, (_, index) => (
+                      <span key={index}>⭐</span>
+                    ))
+                  }
 
-    </section>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </>
+      }
+    </section >
   )
 }

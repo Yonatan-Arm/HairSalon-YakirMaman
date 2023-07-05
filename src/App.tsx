@@ -6,9 +6,14 @@ import Dashboard from "./pages/Dashboard";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import HairLightening from "./pages/HairLightening";
+import HairStraightening from "./pages/HairStraightening";
+
 
 function App() {
   const [isOrderModalOpen, setisOrderModalOpen] = useState(false);
+  
+
 
   return (
     <Router>
@@ -16,6 +21,8 @@ function App() {
         <Navbar OpenModalOrder={() => setisOrderModalOpen(true)} />
         <Routes>
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="lightening" element={<HairLightening />} />
+          <Route path="straightening" element={<HairStraightening />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
           <Route

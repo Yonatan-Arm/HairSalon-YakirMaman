@@ -3,6 +3,8 @@
     color: $clr11;
     z-index: 20;
     padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
 
     @include for-tablet-layout {
         justify-content: space-between !important;
@@ -76,7 +78,6 @@
             height: 100vh;
             width: 100%;
             padding: 25px;
-            // background: linear-gradient(180deg, #a29c96 40%, #bcb3aa 60%);
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/imgs/back.jpg') center center/cover no-repeat !important;
 
             text-align: center;

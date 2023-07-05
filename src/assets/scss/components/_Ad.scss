@@ -4,13 +4,14 @@
     padding: 15px;
 
     .skiils {
+        align-items: baseline;
         @include for-mobile-layout {
             flex-wrap: wrap;
             gap: 10px;
         }
-        span {
+        span,a {
             @include for-tablet-layout {
-                font-size: rem(20px);
+                font-size: rem(26px);
                 
             }
 

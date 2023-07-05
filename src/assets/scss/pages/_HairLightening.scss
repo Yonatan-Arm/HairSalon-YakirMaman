@@ -1,0 +1,42 @@
+.lightening-section {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        gap: 10px;
+        font-size: rem(18px);
+
+    }
+
+    .lightening-carousel {
+
+        .swiper {
+            padding-bottom: 80px;
+            padding-top: 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: rem(300px) !important;
+            height: rem(350px);
+            // -webkit-box-reflect: below 1px linear-gradient(#111, #111, #0006);
+            border-radius: 12px;
+
+            @include for-tablet-layout {
+                width: rem(200px) !important;
+                height: rem(250px);
+            }
+
+        }
+    }
+
+}

@@ -1,6 +1,24 @@
 import React from "react";
 import videsSrc from "../assets/imgs/yakir-video-haircut.mp4";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+import "swiper/css/pagination";
+
+
+import "swiper/css";
+
 export default function Gallary() {
+
+  const slides = [
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/6.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/7.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/3.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/4.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/8.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/5.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/2.jpg",
+    "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/1.jpg",
+  ];
 
 
   return (
@@ -12,94 +30,27 @@ export default function Gallary() {
       <h2>
         <i> Enjoy Our Awesome Snapshot </i>
       </h2>
-      <div className="gallary-contianer flex wrap align-center justify-center slider">
-        <div className="slide-track">
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/1.jpg"
-              alt="1"
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <div className="swiper-wrapper">
+          {slides.map((slide) => (
+            <SwiperSlide
+              key={slide}
+              style={{
+                backgroundImage: `url(${slide})`,
+              }}
             />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/2.jpg"
-              alt="2"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/3.jpg"
-              alt="3"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/4.jpg"
-              alt="4"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/5.jpg"
-              alt="5"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/6.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/3.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/4.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/2.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/1.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/3.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/5.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/4.jpg"
-              alt="6"
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/6.jpg"
-              alt="6"
-            />
-          </div>
+          ))}
         </div>
-      </div>
+        <div className="swiper-pagination"></div>
+      </Swiper>
     </section>
   );
 }
