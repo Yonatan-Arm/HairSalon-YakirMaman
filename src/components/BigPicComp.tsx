@@ -6,11 +6,11 @@ import "swiper/css/grid";
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
 
-import reviews from '../reviews.js'
+import reviews from '../reviews'
 
 
 export default function BigPicComp() {
-  const [reviewsToDisplay, setReviewsToDisplay] = useState([]);
+  const [reviewsToDisplay, setReviewsToDisplay] =  useState<review[]>([]);
   useEffect(() => {
     setReviewsToDisplay(reviews)
   }, []);

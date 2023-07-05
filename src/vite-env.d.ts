@@ -9,3 +9,4 @@ type review = {
     profileImg:string,
     review:string
 };
+
