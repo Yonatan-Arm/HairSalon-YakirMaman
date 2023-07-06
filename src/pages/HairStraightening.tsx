@@ -48,7 +48,7 @@ export default function HairStraightening() {
                 </div>
                 <div className='video-gallery flex wrap align-center justify-center'>
                     {videos.map((url) => (
-                            <video  key={url} autoPlay muted loop={true}>
+                            <video  key={url} autoPlay muted loop={true} playsInline>
                                 <source src={url} type='video/mp4' />
                                 Sorry, your browser doesn't support videos.
                             </video>

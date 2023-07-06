@@ -8,11 +8,14 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import HairLightening from "./pages/HairLightening";
 import HairStraightening from "./pages/HairStraightening";
+import 'swiper/swiper-bundle.css';
+import SwiperCore, { Autoplay } from 'swiper';
 
 
 function App() {
   const [isOrderModalOpen, setisOrderModalOpen] = useState(false);
-  
+  SwiperCore.use([Autoplay])
+
 
 
   return (

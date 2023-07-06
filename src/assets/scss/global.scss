@@ -56,3 +56,9 @@
         }
     }
 }
+
+#INDmenu-btn{
+    @include for-mobile-layout {
+      bottom: 15% !important;
+    }
+}

@@ -11,7 +11,16 @@
         margin-right: auto;
         padding: 20px;
 
+
+
     }
+
+    // .swiper-wrapper {
+    //     @include for-mobile-layout {
+    //         width: 100% !important;
+            
+    //     }
+    // }
 
     .swiper-slide {
         text-align: center;
@@ -26,7 +35,7 @@
 
     .grid-item {
         border-radius: 12px;
-    
+
         @include for-mobile-layout {
             width: 150px !important;
         }
@@ -36,6 +45,7 @@
             width: rem(80px);
             height: 80px;
             object-fit: cover;
+
             @include for-mobile-layout {
                 height: unset;
             }
