@@ -39,6 +39,12 @@ export default function HairLightening() {
                 pagination={{
                     clickable: true,
                 }}
+                
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter:true
+              }}
                 modules={[Pagination]}
                 className="mySwiper"
             >

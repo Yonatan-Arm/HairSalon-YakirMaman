@@ -33,6 +33,22 @@ export default function Gallary() {
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
+        breakpoints={{
+          300: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }}
+              
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter:true
+        }}
         pagination={{
           clickable: true,
         }}
