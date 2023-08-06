@@ -17,6 +17,7 @@ export default function HairLightening() {
     ];
     return (
         <section className="lightening-section text-center">
+                  <a href="tel:+972534234428" className="phone-icon"></a>
             <h1>הבהרות לשיער</h1>
             <div className="content flex column align-center justify-center ">
                 <span>מספרת יקיר ממן מציגה </span>

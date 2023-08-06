@@ -13,6 +13,7 @@ export default function HairStraightening() {
 "https://res.cloudinary.com/yonatan-cajan22/video/upload/v1688544967/yakirmaman/video2.mp4"    ];
     return (
         <section className='straightening-section text-center'>
+                  <a href="tel:+972534234428" className="phone-icon"></a>
             <div className="content flex column align-center justify-center ">
                 <div>
                     <h2>החלקת חימר</h2>

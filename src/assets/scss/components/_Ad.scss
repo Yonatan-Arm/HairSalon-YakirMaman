@@ -1,6 +1,5 @@
 .Ad-section {
     margin-top: 85vh;
-    // margin-bottom: 20px;
     padding: 15px;
 
     .skiils {
@@ -21,6 +20,11 @@
             color: $clr16;
             font-weight: 600;
             height: 10vh;
+            :hover{
+                text-decoration: underline solid 4px;
+                -webkit-text-decoration: underline solid 4px;
+                filter: drop-shadow(2px 4px 6px black);
+            }
         }
     }
 }

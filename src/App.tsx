@@ -8,6 +8,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import HairLightening from "./pages/HairLightening";
 import HairStraightening from "./pages/HairStraightening";
+import GallaryPage from "./pages/GallaryPage";
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Autoplay } from 'swiper';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lightening" element={<HairLightening />} />
           <Route path="straightening" element={<HairStraightening />} />
+          <Route path="gallery" element={<GallaryPage />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
           <Route

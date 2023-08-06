@@ -16,6 +16,7 @@
 @import 'pages/Login';
 @import 'pages/HairLightening';
 @import 'pages/HairStraightening';
+@import 'pages/GalleryPage';
 
 // Components
 @import 'components/Navbar';
@@ -57,8 +58,17 @@
     }
 }
 
-#INDmenu-btn{
-    @include for-mobile-layout {
-      bottom: 15% !important;
-    }
+// #INDmenu-btn{
+//     @include for-mobile-layout {
+//       bottom: 15% !important;
+//     }
+// }
+#NagishLiTrigger{
+    bottom: 10% !important;
+    right: 3px !important;
+
 }
+.nagishli-trigger-icon{
+    border-radius: 50% !important;
+    bottom: 15% !important;
+  }

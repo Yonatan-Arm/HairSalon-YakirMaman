@@ -36,6 +36,16 @@
                 height: rem(250px);
             }
 
+
+        }
+
+        .swiper-slide:hover {
+            box-shadow: none;
+            transform: scale(1.2);
+            filter: drop-shadow(2px 4px 6px black);
+            z-index: 10;
+            cursor: pointer;
+            
         }
     }
 
