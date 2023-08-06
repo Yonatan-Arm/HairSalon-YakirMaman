@@ -12,10 +12,7 @@
   right: 0;
   bottom: 0;
 
-  @include for-tablet-layout {
-    background-position: unset !important;
-
-  }
+  
 
   .layer {
     background: #433c489c;
@@ -135,16 +132,6 @@
   top: 0;
   right: 0;
   bottom: 0;
-
-  @include for-tablet-layout {
-    background-position: unset !important;
-
-  }
-
-  @include for-tablet-layout {
-    background-position: unset;
-
-  }
 
 
 
