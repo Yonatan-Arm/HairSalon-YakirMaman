@@ -71,7 +71,7 @@
     }
 
     button {
-      background-color: $clr16;
+      background-color: $clr15;
       font-size: 25px;
       width: 50%;
       justify-self: flex-end;
@@ -161,8 +161,6 @@
         border-radius: 50%;
         width: 150px;
         border: 16px solid #f3f3f3;
-        // border-radius: 50%;
-        // border-top: 16px solid $clr13;
         animation: spin 2s linear infinite;
       }
 
