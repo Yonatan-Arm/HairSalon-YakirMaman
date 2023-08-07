@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@types/dotenv": "^8.2.0",
     "accessibility": "^4.5.7",
     "autoprefixer": "^10.4.14",

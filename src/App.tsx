@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import HairLightening from "./pages/HairLightening";
 import HairStraightening from "./pages/HairStraightening";
 import GallaryPage from "./pages/GallaryPage";
+import Contact from "./pages/Contact";
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Autoplay } from 'swiper';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="lightening" element={<HairLightening />} />
           <Route path="straightening" element={<HairStraightening />} />
           <Route path="gallery" element={<GallaryPage />} />
+          <Route path="Contact" element={<Contact />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
           <Route

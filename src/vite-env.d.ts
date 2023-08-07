@@ -10,3 +10,7 @@ type review = {
     review:string
 };
 
+interface RefObject<T> {
+    // immutable
+    readonly current: T | null
+  }

@@ -72,7 +72,7 @@ export function Navbar({ OpenModalOrder }: any) {
           <NavLink to="/">Home</NavLink>
           <Link to='/#Service'>Service</Link>
           <Link to='/#about'>About</Link>
-          <Link to='/#Contect'>Contect</Link>
+          <NavLink to="/Contact">Contact Us</NavLink>
           {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
           {isUserLoggedIn && <span onClick={() => signOutUser()}>Signout</span>}
           {!isUserLoggedIn && !isAdminLoggedIn && (
@@ -102,7 +102,7 @@ export function Navbar({ OpenModalOrder }: any) {
               <NavLink to="/">Home</NavLink>
               <Link to='/#Service'>Service</Link>
               <Link to='/#about'>About</Link>
-              <Link to='/#Contect'>Contect</Link>
+              <NavLink to="/Contact">Contact Us</NavLink>
               {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
               {isUserLoggedIn && (
                 <span onClick={() => signOutUser()}>signout</span>

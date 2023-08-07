@@ -9,11 +9,6 @@
             gap: 10px;
         }
         span,a {
-            @include for-tablet-layout {
-                font-size: rem(26px);
-                
-            }
-
             font-size: rem(35px);
             font-family: monospace;
             margin-top: 15px;
@@ -23,7 +18,7 @@
             :hover{
                 text-decoration: underline solid 4px;
                 -webkit-text-decoration: underline solid 4px;
-                filter: drop-shadow(2px 4px 6px black);
+                filter: drop-shadow(2px 4px 5px black);
             }
         }
     }
