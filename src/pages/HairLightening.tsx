@@ -56,6 +56,7 @@ export default function HairLightening() {
                             style={{
                                 backgroundImage: `url(${slide})`,
                             }}
+                            
                         />
                     ))}
                 </div>

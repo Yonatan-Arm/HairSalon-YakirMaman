@@ -8,7 +8,7 @@ export default function Hero({ OpenModalOrder }: any) {
   return (
     <section className="hero-section flex row " id="Home">
       <div className="profile-img flex align-center justify-center">
-        <img src={yakirSrc} alt="yakir-maman" className="image" />
+        <img src={yakirSrc} alt="yakir-maman" className="image"  loading='lazy'/>
       </div>
       <div className="text-section flex column one">
         <h1>Yakir Maman</h1>

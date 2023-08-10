@@ -46,7 +46,7 @@ export default function Services() {
               className="service-card flex column justify-center align-center"
               key={service.serviceName}
             >
-              <img src={service.serviceImg} alt="service-img" />
+              <img src={service.serviceImg} alt="service-img" loading='lazy' />
               <h2>{service.serviceName} </h2>
               <span>{service.serviceDescription} </span>
             </div>

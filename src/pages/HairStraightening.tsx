@@ -32,7 +32,7 @@ export default function HairStraightening() {
                 </div>
                 <div className='gallery-section flex wrap align-center justify-center'>
                     {images.map((img) => (
-                        <img src={img} alt="straightening-img" key={img} />
+                        <img src={img} alt="straightening-img" key={img}  loading='lazy'/>
                     ))}
 
 

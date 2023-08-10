@@ -34,7 +34,7 @@ export default function GallaryPage() {
                 {imgsSrc.map((img, i) => {
                     return (
                         <div key={i} className='gallery-item' id={'item-' + i} onClick={handleClick}>
-                            <img className='gallery-bg' src={img} alt="grid-img" />
+                            <img className='gallery-bg' src={img} alt="grid-img" loading='lazy' />
                         </div>
 
                     );

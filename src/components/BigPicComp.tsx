@@ -51,7 +51,7 @@ export default function BigPicComp() {
           >
             {reviewsToDisplay.map((review: review) => (
               <SwiperSlide key={review.id} className="grid-item flex column align-center justify-center">
-                <img src={review.profileImg} alt="profileImg" />
+                <img src={review.profileImg} alt="profileImg" loading='lazy' />
                 <span>{review.name}</span>
                 <span>{review.review}</span>
                 <div className="star-rate">
@@ -70,3 +70,4 @@ export default function BigPicComp() {
     </section >
   )
 }
+

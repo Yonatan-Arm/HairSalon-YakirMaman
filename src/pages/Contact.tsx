@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { Ref, useRef, useState } from "react";
 import headPhonesImg from "../assets/imgs/headphones.svg";
 import sendImg from "../assets/imgs/send.svg";
 import emailjs from "@emailjs/browser";
@@ -6,6 +6,7 @@ import YakirSrc from '../assets/imgs/yakir2.jpg'
 export default function Contact() {
     const [sendMessage, setSendMessage] = useState(false);
     const form = useRef();
+
     const sendEmail = (e: any) => {
         e.preventDefault();
         emailjs
