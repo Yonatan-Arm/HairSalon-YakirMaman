@@ -54,17 +54,18 @@ export default function Contact() {
                             <div className="flex column justify-center">
 
                                 <div className="filed">
-                                    <input type="text" name="user_name" placeholder="שם מלא" />
+                                    <input type="text" name="user_name" placeholder="שם מלא"    required={true} />
                                 </div>
                                 <div className="filed">
                                     <input
                                         type="email"
                                         name="user_email"
                                         placeholder="מייל"
+                                        required={true}
                                     />
                                 </div>
                                 <div className="filed">
-                                    <textarea name="message" placeholder="תוכן הפנייה" />
+                                    <textarea name="message" placeholder="תוכן הפנייה"   required={true} />
                                 </div>
                             </div>
                             <div className="btn-box">
