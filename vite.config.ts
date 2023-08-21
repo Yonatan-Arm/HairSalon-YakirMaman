@@ -5,7 +5,7 @@ import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "yakirmaman.com",
+  base: "/HairSalon-YakirMaman/#/",
   plugins: [react(), ],
   css: {
     postcss: {
