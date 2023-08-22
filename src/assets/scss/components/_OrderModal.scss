@@ -73,7 +73,8 @@
     button {
       background-color: $clr15;
       font-size: 25px;
-      width: 50%;
+      width: 40%;
+      border-radius: 20px;
       justify-self: flex-end;
       margin-top: 20px;
       cursor: pointer;
@@ -138,7 +139,7 @@
 
       .date {
         border: 1px solid #222;
-        background: $clr16;
+        background: aliceblue;
         color: #222;
         padding: 8px;
         height: 40px;
