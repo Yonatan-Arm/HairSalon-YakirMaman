@@ -19,11 +19,12 @@ function App() {
   SwiperCore.use([Autoplay])
 
 
-
   return (
     <Router>
       <div className="App">
-        <Navbar OpenModalOrder={() => setisOrderModalOpen(true)} />
+        <Navbar OpenModalOrder={() =>{
+           setisOrderModalOpen(true)
+        }} />
         <Routes>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lightening" element={<HairLightening />} />

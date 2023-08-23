@@ -17,7 +17,11 @@ export default function Footer() {
             <img src={facebookLogoSrc} alt="whatsapp_logo" />
             </a>
             </div>
-            <span>Developed By Yonatan Arm</span>
+            <span>Developed By {""}
+            <a href="https://yonatan-arm.github.io/portfolio-yonatan-arm/" target='blank'>
+               Yonatan Arm
+               </a>
+               </span>
     </section>
   )
 }

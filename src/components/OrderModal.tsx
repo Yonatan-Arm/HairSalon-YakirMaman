@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { userService  } from "../services/user.service.js";
-import LogoSrc from '../assets/imgs/logo.jpg'
+import { userService } from "../services/user.service.js";
+import LogoSrc from "../assets/imgs/logo.jpg";
 
 export default function OrderModal({ closeModalOrder }: any) {
   const [isOpenDates, setisOpenDates] = useState(false);
@@ -61,7 +61,7 @@ export default function OrderModal({ closeModalOrder }: any) {
     <section className="order-section flex justify-center align-center">
       <button onClick={() => closeModalOrder()}>X</button>
       <div className="Modal" id="one">
-        <h1 className="text-center">Make a reservation</h1>
+        <h1 className="text-center">תיאום פגישה</h1>
         <form
           className="Modal flex column"
           onSubmit={makeReservation}
@@ -104,13 +104,17 @@ export default function OrderModal({ closeModalOrder }: any) {
               )}
             </div>
           )}
-          {isMakeReservation && 
-          <div className="modal-loader flex column justify-center align-center">
-            <img src={LogoSrc} alt="loading" />
-            <span>send your reservation...</span>
-          </div>
-          }
-          <button>send</button>
+          {isMakeReservation && (
+            <div className="modal-loader flex column justify-center align-center">
+              <img src={LogoSrc} alt="loading" />
+              {/* <span>send your reservation...</span> */}
+              <div className="flex column justify-center message" dir="rtl">
+                <h2>תודה על הזמנתך!</h2>
+                <p>ניצור איתכם קשר בהקדם האפשרי</p>
+              </div>
+            </div>
+          )}
+          <button>שלח</button>
         </form>
       </div>
     </section>

@@ -4,8 +4,7 @@ import Menusrc from "../assets/imgs/menu.svg";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../services/firebase.service";
 import { NavLink, useLocation } from "react-router-dom";
-import { HashLink as Link } from 'react-router-hash-link';
-
+import { HashLink as Link } from "react-router-hash-link";
 
 export function Navbar({ OpenModalOrder }: any) {
   const [isOpen, setisOpen] = useState(false);
@@ -56,9 +55,10 @@ export function Navbar({ OpenModalOrder }: any) {
   return (
     <div
       className={`
-        ${isDash
-          ? "navbar flex row space-between align-center dashboardPage"
-          : "navbar flex row space-between align-center"
+        ${
+          isDash
+            ? "navbar flex row space-between align-center dashboardPage"
+            : "navbar flex row space-between align-center"
         }`}
     >
       {" "}
@@ -69,27 +69,24 @@ export function Navbar({ OpenModalOrder }: any) {
       </div>
       {!isSignInPage && (
         <div className="flex  links">
-          <NavLink to="/">Home</NavLink>
-          <Link to='/#Service'>Service</Link>
-          <Link to='/#about'>About</Link>
-          <NavLink to="/Contact">Contact Us</NavLink>
+          <NavLink to="/Contact">צור קשר</NavLink>
           {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
-          {isUserLoggedIn && <span onClick={() => signOutUser()}>Signout</span>}
+          {isUserLoggedIn && <span onClick={() => signOutUser()}>יציאה</span>}
           {!isUserLoggedIn && !isAdminLoggedIn && (
-            <NavLink to="login">Login</NavLink>
+            <NavLink to="login">התחברות</NavLink>
           )}
+          <Link to="/#about">אודות</Link>
+          <Link to="/#Service">שירותי המספרה</Link>
+          <NavLink to="/">דף הבית</NavLink>
         </div>
       )}
       <div className="cta-btn">
         {isSignInPage ? (
           <NavLink to="/">
-            <button onClick={() => OpenModalOrder()}>
-              {" "}
-              Book Appointment
-            </button>
+            <button onClick={() => OpenModalOrder()}>זימון תור למספרה</button>
           </NavLink>
         ) : (
-          <button onClick={() => OpenModalOrder()}> Book Appointment</button>
+          <button onClick={() => OpenModalOrder()}>זימון תור למספרה</button>
         )}
       </div>
       <div className="mobile-menu">
@@ -99,16 +96,16 @@ export function Navbar({ OpenModalOrder }: any) {
               X
             </span>
             <div className="flex column mobile-links align-center justify-center">
-              <NavLink to="/">Home</NavLink>
-              <Link to='/#Service'>Service</Link>
-              <Link to='/#about'>About</Link>
-              <NavLink to="/Contact">Contact Us</NavLink>
+              <NavLink to="/">דף הבית</NavLink>
+              <Link to="/#Service">שירותי המספרה</Link>
+              <Link to="/#about">אודות</Link>
+              <NavLink to="/Contact">צור קשר</NavLink>
               {isAdminLoggedIn && <NavLink to="dashboard">Dashboard</NavLink>}
               {isUserLoggedIn && (
-                <span onClick={() => signOutUser()}>signout</span>
+                <span onClick={() => signOutUser()}>יציאה</span>
               )}
               {!isUserLoggedIn && !isAdminLoggedIn && (
-                <NavLink to="login">Login</NavLink>
+                <NavLink to="login">התחברות</NavLink>
               )}
               <div className="cta-btn-mobile">
                 <button
@@ -117,8 +114,7 @@ export function Navbar({ OpenModalOrder }: any) {
                     setisOpen(!isOpen);
                   }}
                 >
-                  {" "}
-                  Book Appointment
+                  זימון תור למספרה
                 </button>
               </div>
             </div>

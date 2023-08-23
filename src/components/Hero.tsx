@@ -27,7 +27,7 @@ export default function Hero({ OpenModalOrder }: any) {
               onClick={() => setCloseVideo(true)}
             >
               <img src={playSrc} alt="playSrc" />
-              Watch video
+              צפה בסרטון
             </button>
           </div>
           <a href="tel:+972534234428" className="phone-btn" >053-4234428

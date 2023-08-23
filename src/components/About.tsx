@@ -3,9 +3,9 @@ import React from "react";
 export default function About({ OpenModalOrder }: any) {
   return (
     <section className="about-section" id="about">
-      <h1>About Us</h1>
+      <h1>אודות המספרה</h1>
       <h3>
-        <i>The Hair Style Salon Since 2015 </i>
+        <i>מתמחים בעיצוב שיער מ2015 </i>
       </h3>
       <div className="main-continer flex row">
         {/* <div className="image-continer"></div> */}

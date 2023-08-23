@@ -11,13 +11,13 @@ export default function Contact() {
         e.preventDefault();
         emailjs
             .sendForm(
-                "service_qzxap0r",
-                "template_wt0f4ng",
+                "service_26745cu",
+                "template_9uzagj1",
                 e.target,
                 "nAg_NofuvJfYHzrFz"
             )
             .then(
-                (result) => {
+                () => {
                     setSendMessage(true);
                     setTimeout(() => {
                         setSendMessage(false);

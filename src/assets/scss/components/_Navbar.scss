@@ -21,7 +21,8 @@
 
     .links {
         gap: 30px;
-        font-size: rem(25px);
+        font-size: rem(24px);
+        font-family: 'IBM Plex Sans Hebrew', sans-serif;
 
         @include for-wide-layout {
             gap: 15px;
@@ -47,6 +48,8 @@
             color: $clr14;
             font-weight: 650;
             font-size: 14px;
+            font-family: 'IBM Plex Sans Hebrew', sans-serif;
+            letter-spacing: 1px;
 
             @include for-wide-layout {
                 padding: 12px;

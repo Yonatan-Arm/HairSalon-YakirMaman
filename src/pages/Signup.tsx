@@ -34,7 +34,7 @@ const Signup = () => {
     <section className="signup-page">
       <div className="layer flex align-center justify-center">
         <div className="signup-form">
-          <h1>Sign Up</h1>
+          <h1>הרשמה</h1>
           <form onSubmit={onSubmit} className="flex column">
             <div>
               <input
@@ -63,11 +63,11 @@ const Signup = () => {
             </div>
 
             <div>
-              <button type="submit">Sign up</button>
+              <button type="submit">הרשמה</button>
             </div>
-            {errorMessage && <div className="error-message">wrong details</div>}
+            {errorMessage && <div className="error-message">פרטי הרשמה שגויים</div>}
             <p>
-              Already have an account? <NavLink to="/login">Sign in</NavLink>
+              יש לך כבר חשבון? <NavLink to="/login">התחבר</NavLink>
             </p>
           </form>
         </div>

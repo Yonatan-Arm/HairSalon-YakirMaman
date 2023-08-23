@@ -3,6 +3,7 @@
     text-align: center;
     margin-bottom: 20px;
     padding: 20px;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
 
     h3 {
         font-weight: 550;
@@ -34,12 +35,13 @@
 
         @include for-tablet-layout {
             width: 50%;
-            height: 200px;
+            height: 220px;
         }
-
+        
         @include for-mobile-layout {
             width: 80%;
             margin: 0 auto;
+            height: 260px;
         }
 
         width: 25%;

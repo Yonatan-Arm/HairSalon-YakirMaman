@@ -33,7 +33,7 @@ const Login = () => {
     <section className="login-page  ">
       <div className="layer flex align-center justify-center">
         <div className="login-form">
-          <h1>Login</h1>
+          <h1>התחברות</h1>
           <form onSubmit={onLogin} className="flex column">
             <div>
               <input
@@ -59,12 +59,12 @@ const Login = () => {
               />
             </div>
             <div>
-              <button type="submit">Login</button>
+              <button type="submit">התחבר</button>
             </div>
-            {errorMessage && <div className="error-message">wrong details</div>}
+            {errorMessage && <div className="error-message">פרטי התחברות שגויים</div>}
           </form>
           <p>
-            No account yet? <NavLink to="/signup">Sign up</NavLink>
+             אין לך חשבון עדיין? <NavLink to="/signup">הירשם</NavLink>
           </p>
         </div>
       </div>
