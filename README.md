@@ -1,7 +1,7 @@
 # Hair Stylist Website - Project README
 
 Discover the future of hairstylist websites with our cutting-edge project! We've developed a dynamic and interactive website for a hair stylist, utilizing top-tier technologies to create a seamless user experience.
-
+ <h1>Project link: <a href="Yakirmaman.com" target="blank">Live </a> </h1>
 # What We Used
 React: Crafted a captivating user interface using React, ensuring a fluid and engaging browsing journey.
 
