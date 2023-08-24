@@ -22,7 +22,7 @@ Effortless Data Management: Firebase provides a reliable backend solution, enabl
 Dynamic User Interface: React is employed to build an interactive UI, enhancing user engagement and overall usability.
 
 #Project Preview
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/hero" />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/hero" width:500px/>
 <img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/about" />
 <img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/review.jpg" />
 <img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/order.jpg" />
