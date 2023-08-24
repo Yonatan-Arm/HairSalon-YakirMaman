@@ -27,7 +27,7 @@ Dynamic User Interface: React is employed to build an interactive UI, enhancing 
 
 <img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/about"  width="1000"  />
 
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/review.jpg"  width="1000"  />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/reviews.jpg"  width="1000"  />
 
 <img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/order.jpg"  width="1000"  />
 
