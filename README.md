@@ -23,15 +23,15 @@ Dynamic User Interface: React is employed to build an interactive UI, enhancing 
 
 #Project Preview
 
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/hero"  width="500" />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/hero"  width="1000" />
 
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/about"  width="500"  />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/about"  width="1000"  />
 
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/review.jpg"  width="500"  />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/review.jpg"  width="1000"  />
 
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/order.jpg"  width="500"  />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/order.jpg"  width="1000"  />
 
-<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/contact.jpg"   width="500" />
+<img src="https://res.cloudinary.com/yonatan-cajan22/image/upload/v1692863989/yakirmaman/contact.jpg"   width="1000" />
 
 # Getting Started
 1. Clone the Repository: Begin by cloning this repository to your local machine.
