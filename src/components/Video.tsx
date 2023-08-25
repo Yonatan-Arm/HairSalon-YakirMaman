@@ -1,5 +1,5 @@
 import videoSrc from "../assets/imgs/yakir-video.mp4";
-export default function OrderModal({ closeVideo }: any) {
+export default function OrderModal({ closeVideo }: closeVideo) {
   return (
     <section className="video-section" id="one"  onClick={() => closeVideo()}>
       <button onClick={() => closeVideo()}>X</button>

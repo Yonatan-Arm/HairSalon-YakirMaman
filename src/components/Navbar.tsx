@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Logosrc from "../assets/imgs/logo.jpg";
 import Menusrc from "../assets/imgs/menu.svg";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut,User  } from "firebase/auth";
 import { auth } from "../services/firebase.service";
 import { NavLink, useLocation } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 
-export function Navbar({ OpenModalOrder }: any) {
+export function Navbar({ OpenModalOrder }: OpenModalProps) {
   const [isOpen, setisOpen] = useState(false);
   const [isDash, setIsDash] = useState(false);
   const [isSignInPage, setIsSignInPage] = useState(false);
@@ -15,7 +15,7 @@ export function Navbar({ OpenModalOrder }: any) {
   const location = useLocation();
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user: any) => {
+    onAuthStateChanged(auth, (user:User | null) => {
       if (user && user.uid === import.meta.env.VITE__USERADMIN) {
         setIsAdminLoggedIn(true);
         setIsUserLoggedIn(true);

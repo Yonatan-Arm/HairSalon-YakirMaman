@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
 
-  const onLogin = async (e: any) => {
+  const onLogin = async (e: EmailFormEvent) => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(

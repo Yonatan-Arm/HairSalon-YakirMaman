@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css";
 
 export default function Gallary() {
-  const slides = [
+  const slides:string[] = [
     "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/6.jpg",
     "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/7.jpg",
     "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1681123353/yakirmaman/3.jpg",

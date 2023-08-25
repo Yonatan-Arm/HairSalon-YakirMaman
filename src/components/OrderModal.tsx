@@ -2,14 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { userService } from "../services/user.service.js";
 import LogoSrc from "../assets/imgs/logo.jpg";
 
-export default function OrderModal({ closeModalOrder }: any) {
+export default function OrderModal({ closeModalOrder }: closeModalOrder) {
   const [isOpenDates, setisOpenDates] = useState(false);
   const [isMakeReservation, setIsMakeReservation] = useState(false);
   const [dates, setdates] = useState({});
   const [selectedHour, setselectedHour] = useState("");
-  const form: any = useRef();
+  const form = useRef();
 
-  const chooseDate = async (event: any) => {
+  const chooseDate = async (event: React.ChangeEvent<HTMLInputElement>) => {
     let date = event.target.value;
     const res = await userService.getById(date);
     delete res.id;
@@ -46,6 +46,7 @@ export default function OrderModal({ closeModalOrder }: any) {
       setIsMakeReservation(true);
       setTimeout(() => {
         setIsMakeReservation(false);
+        closeModalOrder()
       }, 3000);
       setdates({});
       setselectedHour("");

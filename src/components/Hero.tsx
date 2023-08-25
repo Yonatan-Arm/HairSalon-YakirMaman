@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import yakirSrc from "../assets/imgs/logo.jpg";
 import playSrc from "../assets/imgs/play-button.svg";
 import Video from "./Video";
-export default function Hero({ OpenModalOrder }: any) {
-  const [closeVideo, setCloseVideo] = useState(false);
+export default function Hero({ OpenModalOrder }: OpenModalProps) {
+  const [closeVideo , setCloseVideo] = useState(false);
 
   return (
     <section className="hero-section flex row " id="Home">
@@ -19,7 +19,6 @@ export default function Hero({ OpenModalOrder }: any) {
             <button
               onClick={() => {
                 OpenModalOrder();
-
               }}
             >זימון תור למספרה</button>
             <button

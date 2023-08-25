@@ -9,7 +9,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
 
-  const onSubmit = async (e: any) => {
+  const onSubmit = async (e: EmailFormEvent) => {
     e.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(

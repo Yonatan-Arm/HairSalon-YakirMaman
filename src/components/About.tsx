@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function About({ OpenModalOrder }: any) {
+export default function About({ OpenModalOrder }: OpenModalProps) {
   return (
     <section className="about-section" id="about">
       <h1>אודות המספרה</h1>

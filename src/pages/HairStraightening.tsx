@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function HairStraightening() {
-    const images = [
+    const images:string[] = [
         "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1688470005/yakirmaman/20.jpg",
         "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1688470005/yakirmaman/21.jpg",
         "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1688470005/yakirmaman/22.jpg",

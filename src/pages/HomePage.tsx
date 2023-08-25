@@ -7,7 +7,7 @@ import Services from "../components/Services";
 import OrderModal from "../components/OrderModal";
 import BigPicComp from "../components/BigPicComp";
 
-export default function HomePage({ isOrderModalOpen, closeModalOrder }: any) {
+export default function HomePage({ isOrderModalOpen, closeModalOrder }: HomePageProps) {
   const [OrderModalOpen, setOrderModalOpen] = useState(false);
   const close = () => {
     setOrderModalOpen(false);

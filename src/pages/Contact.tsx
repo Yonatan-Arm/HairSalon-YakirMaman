@@ -6,8 +6,9 @@ import YakirSrc from '../assets/imgs/yakir.jpg'
 export default function Contact() {
     const [sendMessage, setSendMessage] = useState(false);
     const form = useRef();
+    
 
-    const sendEmail = (e: any) => {
+    const sendEmail = (e: EmailFormEvent) => {
         e.preventDefault();
         emailjs
             .sendForm(

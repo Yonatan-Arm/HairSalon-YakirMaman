@@ -3,7 +3,7 @@ import { userService } from "../services/user.service.js";
 import deleteBtn from "../assets/imgs/delete-btn.svg";
 import HomeSrc from "../assets/imgs/homeSvg.svg";
 import { NavLink, useNavigate } from "react-router-dom";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut,User } from "firebase/auth";
 import { auth } from "../services/firebase.service";
 
 export default function Dashboard() {
@@ -11,7 +11,7 @@ export default function Dashboard() {
   const [date, setDate] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    onAuthStateChanged(auth, (user: any) => {
+    onAuthStateChanged(auth, (user: User|null) => {
       if (user && user.uid === import.meta.env.VITE__USERADMIN) {
       } else {
         navigate("/");
@@ -29,12 +29,12 @@ export default function Dashboard() {
     return () => {};
   }, [dates]);
 
-  const chooseDate = async (event: any) => {
-    const date = event.target ? event.target.value : event;
+  const chooseDate = async (event: React.ChangeEvent<HTMLInputElement> | string) => {
+    const date = typeof event === 'string' ? event : event.target.value;
     setDate(date);
     const res = await userService.getById(date);
     delete res.id;
-    const sortedObj: any = await sortObj(res);
+    const sortedObj:object = await sortObj(res);
     setDates(sortedObj);
   };
 
@@ -52,7 +52,7 @@ export default function Dashboard() {
     return sortedData;
   }
 
-  const removeResevation = async (val: any) => {
+  const removeResevation = async (val: string) => {
     await userService.remove(date, val);
     try {
       chooseDate(date);

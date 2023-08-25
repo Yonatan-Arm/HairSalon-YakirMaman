@@ -15,11 +15,10 @@ export default function GallaryPage() {
         "https://res.cloudinary.com/yonatan-cajan22/image/upload/v1687953025/yakirmaman/lightening6.jpg",
     ];
 
-    const handleClick = (e: any) => {
+    const handleClick = (e: ChooseImg) => {
         setSrc(e.target.src);
         setIsOpen(!isOpen);
     }
-
 
     return (
 
