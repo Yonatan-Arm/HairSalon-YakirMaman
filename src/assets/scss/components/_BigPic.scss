@@ -1,8 +1,11 @@
 .big-pic-comp {
     background: url(/src/assets/imgs/big-pic-section.jpg) center center/cover no-repeat !important;
-    // background-attachment: fixed !important;
     width: 100%;
     height: 70vh;
+    @include for-mobile-layout {
+        height: 75vh;
+
+    }
 
     .swiper {
         width: 100%;
@@ -15,13 +18,6 @@
 
     }
 
-    // .swiper-wrapper {
-    //     @include for-mobile-layout {
-    //         width: 100% !important;
-            
-    //     }
-    // }
-
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -31,6 +27,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include for-mobile-layout {
+            height: calc((100% - 20px) / 2) !important;
+        }
     }
 
     .grid-item {
@@ -45,6 +44,7 @@
             width: rem(80px);
             height: 80px;
             object-fit: cover;
+            aspect-ratio: 1/1;
 
             @include for-mobile-layout {
                 height: unset;

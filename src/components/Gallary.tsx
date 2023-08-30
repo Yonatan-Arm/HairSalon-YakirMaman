@@ -44,11 +44,6 @@ export default function Gallary() {
         }}
         slidesPerView={5}
         spaceBetween={30}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
         pagination={{
           clickable: true,
         }}
